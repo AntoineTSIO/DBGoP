@@ -26,10 +26,25 @@ CREATE TABLE Gift (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE Ingredients (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    location VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE Food (
     id INTEGER NOT NULL AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
-    PRIMARY KEY (id)
+    ingredient_1 INTEGER,
+    ingredient_2 INTEGER,
+    ingredient_3 INTEGER,
+    effect VARCHAR(50) NOT NULL,
+    location VARCHAR(50),
+    PRIMARY KEY (id),
+    FOREIGN KEY (ingredient_1) REFERENCES Ingredients(id),
+    FOREIGN KEY (ingredient_2) REFERENCES Ingredients(id),
+    FOREIGN KEY (ingredient_3) REFERENCES Ingredients(id)
 );
 
 CREATE TABLE Equipment (

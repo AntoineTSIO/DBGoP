@@ -21,21 +21,32 @@ INSERT INTO Race (id, name) VALUES
 (5,"Goddess"),
 (6,"Unknown");
 
-INSERT INTO Gift (id, name) VALUES
-(1,""),
-(2,""),
-(3,""),
-(4,""),
-(5,""),
-(6,""),
-(7,""),
-(8,""),
-(9,""),
-(10,""),
-(11,"");
+INSERT INTO Gift (name) VALUES
+(""),
+(""),
+(""),
+(""),
+(""),
+(""),
+(""),
+(""),
+(""),
+("");
 
-INSERT INTO Food (id, name) VALUES
-(1, "");
+INSERT INTO Ingredients(id, name, location) VALUES
+(1,"Agead Meat","Town 1"),
+(2,"Sugar","Town 3,6"),
+(3,"Bay Leaf","Town 1"),
+(4,"Vegetables","Town 4"),
+(5,"Milk","Town 2,4"),
+(6,"Egg","Town 2,6"),
+(7,"Sliced Chicken Matango","Town 1");
+
+INSERT INTO Food (name, ingredient_1, ingredient_2, ingredient_3, effect, location) VALUES
+("Sweet Meatpie","1","2","3","EXP +100%","Town 1"),
+("Vegetable Meatpie","1","4","3","EXP +100%","Town 1"),
+("Milk Meatpie","1","5","3","EXP +100%","Town 1"),
+("Chicken Matango Tamagoyaki","1","6","7","Attack +10%","Town 1");
 
 INSERT INTO Equipment (id, name, set_number, bonus, location) VALUES
 (1,"Attack",4,"+20% Attack","Chapter 1"),
